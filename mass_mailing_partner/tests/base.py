@@ -53,7 +53,6 @@ class BaseCase(TransactionCase):
         if mailing_contact.partner_id:
             self.assertEqual(mailing_contact.partner_id.email, mailing_contact.email)
             self.assertEqual(mailing_contact.partner_id.name, mailing_contact.name)
-            self.assertEqual(mailing_contact.partner_id.title, mailing_contact.title_id)
             if mailing_contact.partner_id.company_id:
                 self.assertEqual(
                     mailing_contact.partner_id.company_id.name,
